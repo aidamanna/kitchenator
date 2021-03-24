@@ -129,9 +129,9 @@ body {
 }
 
 .menu-day {
-    flex-basis: 8em;
+    flex-basis: 5em;
     flex-shrink: 0;
-    font-size: 1.15em;
+    font-size: 1.2em;
     margin-right: 1em;
 }
 
@@ -140,10 +140,10 @@ body {
 }
 
 .menu-meal {
-    font-size: 1em;
+    font-size: 1.05em;
 }
 
-@media (min-width:960px) {
+@media (min-width:600px) {
     .header-wrapper {
         justify-content: space-between;
     }
