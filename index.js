@@ -5,13 +5,15 @@ const mainElement = document.querySelector('.main-wrapper');
 
 const menuItemsElement = menuRespository.get().map( dailyMenu  => 
     `<li>
-    <div class="weekly-meny-day">${dailyMenu.day}<div>
-    <div class="weekly-menu-meal">Lunch: 
-        <a href="${dailyMenu.lunch.link}">${dailyMenu.lunch.title}</a>
-    </div>
-    <div class="weekly-menu-meal">Dinner: 
-        <a href="${dailyMenu.dinner.link}">${dailyMenu.dinner.title}</a>
-    </div>
+        <div class="menu-day">${dailyMenu.day}</div>
+        <div class="menu-meals">
+            <div class="menu-meal">🌞 
+                <a href="${dailyMenu.lunch.link}">${dailyMenu.lunch.title}</a>
+            </div>
+            <div class="menu-meal">🌙  
+                <a href="${dailyMenu.dinner.link}">${dailyMenu.dinner.title}</a>
+            </div>
+        </div>
     </li>`).join('');
 
 

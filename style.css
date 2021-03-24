@@ -88,7 +88,7 @@ body {
 }
 
 .navigation ul {
-    margin: 1.6em 0 0;
+    margin: 1.4em 0 0;
     text-align: center;
 }
 
@@ -114,19 +114,37 @@ body {
 }
 
 .main-wrapper {
-    width: 960px;
+    width: 500px;
     max-width: 100%;
-    padding: 40px;
+    padding: 30px;
     margin: 0 auto;
 }
 
 .weekly-menu-list {
     display: grid;
-    grid-template-rows: repeat;
-    grid-row-gap: 20px;
+    grid-row-gap: 0.6em;
 }
 
 .weekly-menu-list li{
     display: flex;
+    align-items: center;
     border-radius: 8px;
+    border: 1px var(--white) solid;
+    background: var(--white);
+    padding: 8px;
+}
+
+.menu-day {
+    flex-basis: 8em;
+    flex-shrink: 0;
+    font-size: 0.9em;
+    margin-right: 1em;
+}
+
+.menu-meals {
+    
+}
+
+.menu-meal {
+    font-size: 0.8em;
 }

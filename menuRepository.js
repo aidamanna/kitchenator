@@ -1,6 +1,6 @@
 const menu = [
     {
-        "day": "22032021",
+        "day": "Monday 22 Mar",
         "lunch": {
             "title": "Lentejas",
             "link": ""
@@ -11,7 +11,7 @@ const menu = [
         }
     },
     {
-        "day": "23032021",
+        "day": "Tuesday 23 Mar",
         "lunch": {
             "title": "Quiche veggie",
             "link": ""
@@ -22,7 +22,7 @@ const menu = [
         }
     },
     {
-        "day": "24032021",
+        "day": "Wednesday 24 Mar",
         "lunch": {
             "title": "Curry verde Tailandes de pollo",
             "link": ""
@@ -33,7 +33,7 @@ const menu = [
         }
     },
     {
-        "day": "25032021",
+        "day": "Thursday 25 Mar",
         "lunch": {
             "title": "Macarrones",
             "link": ""
@@ -44,7 +44,7 @@ const menu = [
         }
     },
     {
-        "day": "26032021",
+        "day": "Friday 26 Mar",
         "lunch": {
             "title": "Quiche veggie",
             "link": ""
@@ -55,7 +55,7 @@ const menu = [
         }
     },
     {
-        "day": "27032021",
+        "day": "Saturday 27 Mar",
         "lunch": {
             "title": "Quiche veggie",
             "link": ""
@@ -66,7 +66,7 @@ const menu = [
         }
     },
     {
-        "day": "28032021",
+        "day": "Sunday 28 Mar",
         "lunch": {
             "title": "Quiche veggie",
             "link": ""
