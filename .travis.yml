@@ -5,4 +5,5 @@ node_js:
 cache: npm
 
 script:
-  - npm run build
+  - npm run build || travis_terminate 1
+  - ./infrastructure/kitchenator/apply.sh || travis_terminate 1
