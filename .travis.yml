@@ -7,7 +7,9 @@ cache: npm
 env:
   - TERRAFORM_VERSION=0.14.9
 
-before_install:
+before-install:
+  - pip install --user awscli
+  - export PATH=$PATH:$HOME/.local/bin
   - wget https://releases.hashicorp.com/terraform/"$TERRAFORM_VERSION"/terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
   - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
   - sudo mv terraform /usr/local/bin/
