@@ -4,11 +4,14 @@ node_js:
 
 cache: npm
 
+env:
+  - TERRAFORM_VERSION=0.14.9
+
 before_install:
-  - wget https://releases.hashicorp.com/terraform/0.14.9/terraform_0.14.9_linux_amd64.zip
-  - unzip terraform_0.14.9_linux_amd64.zip
+  - wget https://releases.hashicorp.com/terraform/"$TERRAFORM_VERSION"/terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
+  - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
   - sudo mv terraform /usr/local/bin/
-  - rm terraform_0.14.9_linux_amd64.zip
+  - rm terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
 
 script:
   - npm run build || travis_terminate 1
