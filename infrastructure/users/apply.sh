@@ -2,6 +2,8 @@
 
 set -euxo pipefail
 
+cd "$(dirname "$0")"
+
 rm -rf ./.terraform
 
 terraform init

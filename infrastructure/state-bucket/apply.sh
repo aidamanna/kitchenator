@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd "$(dirname "$0")"
+
 echo "Creating s3 state bucket and dynamo table for locking state with local state"
 mv backend.tf backend.tf.backup
 

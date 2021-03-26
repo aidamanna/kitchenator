@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-cd state-bucket
-./apply.sh
-cd ..
-
-cd users
-./apply.sh
-cd ..
+cd "$(dirname "$0")"
+./state-bucket./apply.sh
+./users/apply.sh
