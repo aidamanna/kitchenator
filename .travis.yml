@@ -18,3 +18,10 @@ before-install:
 script:
   - npm run build || travis_terminate 1
   - ./infrastructure/kitchenator/apply.sh || travis_terminate 1
+
+deploy:
+  provider: script
+  script: bash ./infrastructure/kitchenator/deploy-website.sh
+  skip_cleanup: true
+  on:
+    branch: main
