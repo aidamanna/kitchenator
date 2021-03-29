@@ -78,6 +78,8 @@ const menu = [
     }
 ]
 
-export function get() {
+function get() {
     return menu;
 }
+
+module.exports = { get };
