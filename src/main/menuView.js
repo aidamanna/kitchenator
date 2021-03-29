@@ -1,5 +1,5 @@
 const menuRespository = require('./menuRepository');
-
+const addMenuView = require('./addMenuView');
 
 function render(targetElement) {
     const menuItemsElement = menuRespository.get().map( dailyMenu  => 
@@ -14,13 +14,14 @@ function render(targetElement) {
                 </div>
             </div>
         </li>`).join('');
-    
-    
-    const menuListElement = document.createElement('ul');
-    menuListElement.classList.add("weekly-menu-list")
-    menuListElement.innerHTML = menuItemsElement;
-        
-    targetElement.appendChild(menuListElement);
+
+    const menuListListElement = `<input type="button" class="btn-default btn-block" value="Add your menu">
+                <ul class="weekly-menu-list">${menuItemsElement}</ul>`
+
+    targetElement.innerHTML = menuListListElement;
+
+    const buttonElement = document.querySelector('input');
+    buttonElement.addEventListener('click', addMenuView.render)
 }
 
 module.exports = { render };

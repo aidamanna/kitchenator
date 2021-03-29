@@ -29,6 +29,16 @@ a {
     text-decoration: none;
 }
 
+textarea,
+input.text,
+input[type="text"],
+input[type="password"],
+input[type="button"],
+input[type="submit"],
+.input-checkbox {
+    -webkit-appearance: none;
+}
+
 html,
 body {
     margin: 0;
@@ -110,13 +120,14 @@ body {
 .main-wrapper {
     width: 600px;
     max-width: 100%;
-    padding: 30px;
+    padding: 20px 25px;
     margin: 0 auto;
 }
 
 .weekly-menu-list {
     display: grid;
     grid-row-gap: 0.6em;
+    margin-top: 14px;
 }
 
 .weekly-menu-list li{
@@ -125,7 +136,7 @@ body {
     border-radius: 8px;
     border: 1px var(--white) solid;
     background: var(--white);
-    padding: 8px;
+    padding: 8px 12px;;
 }
 
 .menu-day {
@@ -152,3 +163,26 @@ body {
         font-size: 1em;
     }
 }
+
+.btn-default {
+    color: var(--white);
+    font-size: 1.05em;
+    border-radius: 8px;
+    background-color: var(--red);
+    padding: 10px 20px;
+    border-width: 0;
+    width: 100%;
+}
+
+.btn-default:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--light-red);
+}
+
+@media (min-width:600px) {
+    .btn-default {
+        width: auto;
+    }
+}
+
