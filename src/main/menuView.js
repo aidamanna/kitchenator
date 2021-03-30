@@ -15,10 +15,10 @@ function render(targetElement) {
             </div>
         </li>`).join('');
 
-    const menuListListElement = `<input type="button" class="btn-default btn-block" value="Add your menu">
+    const menuListElement = `<input type="button" class="btn-default btn-block" value="Add your menu">
                 <ul class="weekly-menu-list">${menuItemsElement}</ul>`
 
-    targetElement.innerHTML = menuListListElement;
+    targetElement.innerHTML = menuListElement;
 
     const buttonElement = document.querySelector('input');
     buttonElement.addEventListener('click', addMenuView.render)
