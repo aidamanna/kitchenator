@@ -39,6 +39,19 @@ input[type="submit"],
     -webkit-appearance: none;
 }
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--gray);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: var(--gray);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: var(--gray);
+  }
+
 html,
 body {
     margin: 0;
@@ -172,6 +185,7 @@ body {
     padding: 10px 20px;
     border-width: 0;
     width: 100%;
+    margin-right: 8px;
 }
 
 .btn-default:hover {
@@ -180,14 +194,8 @@ body {
     background-color: var(--light-red);
 }
 
-.btn-align-right {
-    margin-left: 8px;
-}
-
-@media (min-width:600px) {
-    .btn-default {
-        width: auto;
-    }
+.btn-default:last-child {
+    margin-right: 0px;
 }
 
 .modal-container {
@@ -224,13 +232,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .modal-footer {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 h2 {
@@ -251,15 +259,39 @@ h2 {
     cursor: pointer;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="date"] {
     width: 100%;
     padding: 6px;
     border: 1px solid var(--gray);
     border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 8px;
-    margin-bottom: 14px;
-    resize: vertical;
-    font-size: 1.1em;
+    font-size: 1.05em;
+    color: var(--gray);
+    font-family: 'Fira Sans', Helvetica, Arial, sans-serif;
 }
 
+.input-icon {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.form-element {
+    margin-bottom: 18px;
+    display: flex;
+}
+
+.form-element:last-child {
+    margin-bottom: 0px;
+}
+
+.form-subelement {
+    margin-bottom: 10px;
+}
+
+.form-subelement:last-child {
+    margin-bottom: 0px;
+}
+
+input[type=date]:invalid::-webkit-datetime-edit {
+    color: rgb(221, 26, 26);
+}

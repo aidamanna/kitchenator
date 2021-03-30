@@ -7,13 +7,28 @@ function render() {
                     <span class="close">&times;</span>
                   </header>
                   <form class="modal-content" >
-                    <input type="text" placeholder="Day"/>
-                    <input type="text" placeholder="Lunch"/>
-                    <input type="text" placeholder="Dinner"/>
+                    <div class="form-element">
+                        <img class="input-icon" src="calendar.svg">
+                        <input type="date"/>
+                    </div>
+                    <div class="form-element">
+                        <img class="input-icon" src="sun.svg">
+                        <div>
+                            <input type="text" class="form-subelement" placeholder="Lunch recipe"/>    
+                            <input type="text" class="form-subelement" placeholder="Lunch recipe link"/>                            
+                        </div>
+                    </div>
+                    <div class="form-element">
+                        <img class="input-icon" src="moon.svg">
+                        <div>
+                            <input type="text" class="form-subelement" placeholder="Dinner recipe"/>
+                            <input type="text" class="form-subelement" placeholder="Dinner recipe link"/>
+                        </div>
+                    </div>
                   </form>
                   <footer class="modal-footer">
                     <input type="button" value="Cancel" class="btn-default"/>
-                    <input type="submit" value="Add" class="btn-default btn-align-right"/>
+                    <input type="submit" value="Add" class="btn-default"/>
                   </footer>
             </div>
         </div>

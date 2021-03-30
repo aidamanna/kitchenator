@@ -15,7 +15,7 @@ function render(targetElement) {
             </div>
         </li>`).join('');
 
-    const menuListElement = `<input type="button" class="btn-default btn-block" value="Add your menu">
+    const menuListElement = `<input type="button" class="btn-default" value="Add your menu">
                 <ul class="weekly-menu-list">${menuItemsElement}</ul>`
 
     targetElement.innerHTML = menuListElement;
