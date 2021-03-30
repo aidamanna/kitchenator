@@ -9,7 +9,7 @@ function render() {
                   <form class="modal-content" >
                     <div class="form-element">
                         <img class="input-icon" src="calendar.svg">
-                        <input type="date"/>
+                            <input type="date" placeholder="YYYY-MM-DD"/>
                     </div>
                     <div class="form-element">
                         <img class="input-icon" src="sun.svg">
