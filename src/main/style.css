@@ -39,19 +39,6 @@ input[type="submit"],
     -webkit-appearance: none;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: var(--gray);
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: var(--gray);
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-    color: var(--gray);
-  }
-
 html,
 body {
     margin: 0;
@@ -181,7 +168,7 @@ body {
     padding: 10px 20px;
     border-width: 0;
     width: 100%;
-    margin-right: 8px;
+    margin-left: 8px;
 }
 
 .btn-default:hover {
@@ -190,8 +177,8 @@ body {
     background-color: var(--light-red);
 }
 
-.btn-default:last-child {
-    margin-right: 0px;
+.btn-default:first-child {
+    margin-left: 0px;
 }
 
 .modal-container {
@@ -308,4 +295,8 @@ input[type="date"] {
 
 .form-subelement:last-child {
     margin-bottom: 0px;
+}
+
+.hidden {
+    display: none;
 }
