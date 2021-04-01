@@ -4,13 +4,13 @@ function html(position, title, inputs) {
                     <h2>${title}</h2>
                     <span class="close">&times;</span>
                 </header>
-                <form class="modal-content" >
+                <div class="modal-content" >
                     ${
                         inputs
                         .map(input => `<div class="form-element">${input}</div>`)
                         .join('')
                     }
-                </form>
+                </div>
             </div>`
 }
 
