@@ -1,7 +1,7 @@
-const menuRespository = require('./menuRepository');
-const addMenu = require('./addMenu');
+import * as menuRespository from './menuRepository';
+import * as addMenu from './addMenu';
 
-function render(targetElement) {
+export function render(targetElement) {
     const menuItemsElement = menuRespository.get().map( dailyMenu  => 
         `<li>
             <div class="menu-day">${dailyMenu.day}</div>
@@ -23,5 +23,3 @@ function render(targetElement) {
     const buttonElement = document.querySelector('input');
     buttonElement.addEventListener('click', addMenu.render)
 }
-
-module.exports = { render };

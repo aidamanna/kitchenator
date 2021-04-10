@@ -1,7 +1,7 @@
-const menuRecipeQuestion = require('./components/menuRecipeQuestion');
-const menuStartDayQuestion = require('./components/menuStartDayQuestion');
+import * as menuRecipeQuestion from './components/menuRecipeQuestion';
+import * as menuStartDayQuestion from './components/menuStartDayQuestion';
 
-function render() {
+export function render() {
     const days = Array.from({length: 7}, (_, i) => i + 1);
 
     const menuRecipeQuestions = days
@@ -78,8 +78,7 @@ function render() {
     formElement.addEventListener('submit', function(e) {
         e.preventDefault();
         console.log('submitting!!!');
+        console.log(e);
         document.querySelector('.modal-container').remove();
     });
 }
-
-module.exports = { render };

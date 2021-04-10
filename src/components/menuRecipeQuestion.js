@@ -1,12 +1,14 @@
-const menuQuestion = require('./menuQuestion');
+import Sun from '../assets/images/sun.svg'
+import Moon from '../assets/images/moon.svg'
+import * as menuQuestion from './menuQuestion';
 
-function html(position, title) {
-    const inputs = [`<img class="input-icon" src="sun.svg">
+export function html(position, title) {
+    const inputs = [`<img class="input-icon" src="${Sun}">
                     <div>
                         <input type="text" class="form-subelement" placeholder="Lunch recipe"/>    
                         <input type="text" class="form-subelement" placeholder="Lunch recipe link"/>                            
                     </div>`,
-                    `<img class="input-icon" src="moon.svg">
+                    `<img class="input-icon" src="${Moon}">
                     <div>
                         <input type="text" class="form-subelement" placeholder="Dinner recipe"/>
                         <input type="text" class="form-subelement" placeholder="Dinner recipe link"/>
@@ -14,5 +16,3 @@ function html(position, title) {
 
     return menuQuestion.html(position, title, inputs);
 }
-
-module.exports = { html };

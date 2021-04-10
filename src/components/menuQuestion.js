@@ -1,4 +1,4 @@
-function html(position, title, inputs) {
+export function html(position, title, inputs) {
     return `<div class="question hidden" id="question${position}">
                 <header class="modal-header">
                     <h2>${title}</h2>
@@ -13,5 +13,3 @@ function html(position, title, inputs) {
                 </div>
             </div>`
 }
-
-module.exports = { html };
