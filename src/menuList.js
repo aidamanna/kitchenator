@@ -1,8 +1,11 @@
-import * as menuRespository from './menuRepository';
-import * as addMenu from './addMenu';
+import * as addMenu from "./addMenu";
+import * as menuRepository from "./menuRepository";
 
 export function render(targetElement) {
-    const menuItemsElement = menuRespository.get().map( dailyMenu  => 
+  const menuItemsElement = menuRepository
+    .get()
+    .map(
+      (dailyMenu) =>
         `<li>
             <div class="menu-day">${dailyMenu.day}</div>
             <div>
@@ -13,13 +16,15 @@ export function render(targetElement) {
                     <a href="${dailyMenu.dinner.link}">${dailyMenu.dinner.title}</a>
                 </div>
             </div>
-        </li>`).join('');
+        </li>`
+    )
+    .join("");
 
-    const menuListElement = `<input type="button" class="btn-default" value="Add your menu">
-                <ul class="weekly-menu-list">${menuItemsElement}</ul>`
+  const menuListElement = `<input type="button" class="btn-default" value="Add your menu">
+                <ul class="weekly-menu-list">${menuItemsElement}</ul>`;
 
-    targetElement.innerHTML = menuListElement;
+  targetElement.innerHTML = menuListElement;
 
-    const buttonElement = document.querySelector('input');
-    buttonElement.addEventListener('click', addMenu.render)
+  const buttonElement = document.querySelector("input");
+  buttonElement.addEventListener("click", addMenu.render);
 }
