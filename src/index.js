@@ -1,6 +1,6 @@
 import "./assets/css/style.css";
 
-import * as menuView from "./menuList";
+import * as menuList from "./menuList";
 
 const mainElement = document.querySelector(".main-wrapper");
-menuView.render(mainElement);
+menuList.render(mainElement);
