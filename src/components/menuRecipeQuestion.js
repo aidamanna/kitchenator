@@ -6,7 +6,7 @@ export function html(position, title) {
   const inputs = [
     `<img class="input-icon" src="${Sun}">
                     <div>
-                        <input type="text" class="form-subelement" placeholder="Lunch recipe"/>    
+                        <input type="text" class="form-subelement" placeholder="Lunch recipe title"/>    
                         <input type="text" class="form-subelement" placeholder="Lunch recipe link"/>                            
                     </div>`,
     `<img class="input-icon" src="${Moon}">
