@@ -6,13 +6,13 @@ export function html(position, title) {
   const inputs = [
     `<img class="input-icon" src="${Sun}">
                     <div>
-                        <input type="text" class="form-subelement" placeholder="Lunch recipe title"/>    
-                        <input type="text" class="form-subelement" placeholder="Lunch recipe link"/>                            
+                        <input type="text" class="form-subelement" name="lunch-title" id="lunch-title" placeholder="Lunch recipe title"/>    
+                        <input type="text" class="form-subelement" name="lunch-link" id="lunch-link" placeholder="Lunch recipe link"/>                            
                     </div>`,
     `<img class="input-icon" src="${Moon}">
                     <div>
-                        <input type="text" class="form-subelement" placeholder="Dinner recipe"/>
-                        <input type="text" class="form-subelement" placeholder="Dinner recipe link"/>
+                        <input type="text" class="form-subelement" name="dinner-title" id="dinner-title" placeholder="Dinner recipe"/>
+                        <input type="text" class="form-subelement" name="dinner-link" id="dinner-link" placeholder="Dinner recipe link"/>
                     </div>`,
   ];
 
