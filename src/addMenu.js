@@ -7,13 +7,13 @@ export function render() {
   const days = Array.from({ length: 7 }, (_, i) => i + 1);
 
   const menuRecipeQuestions = days
-    .map((day) => menuRecipeQuestion.html(day, `Day ${day} menu`))
+    .map((day) => menuRecipeQuestion.html(`Day ${day} menu`))
     .join("");
 
   const modal = `<div class="modal-container">
         <div class="modal">
             <form id="add-menu-form" class="modal-wrapper">
-                ${menuStartDayQuestion.html(0)}
+                ${menuStartDayQuestion.html()}
                 ${menuRecipeQuestions} 
                 <footer class="modal-footer">
                     <input type="button" id="back-button" value="Back" class="btn-default hidden"/>
@@ -80,23 +80,21 @@ export function render() {
     document.querySelector(".modal-container").remove();
 
     const form = e.currentTarget;
-    const menuStartDate = form.querySelector("#date").value;
+    const menuStartDate = new Date(form.querySelector("#date").value);
 
-    form.querySelectorAll(".question").forEach((question) => {
-      if (question.id != "question0") {
-        const lunchTitle = question.querySelector("#lunch-title").value;
-        const lunchLink = question.querySelector("#lunch-link").value;
-        const dinnerTitle = question.querySelector("#dinner-title").value;
-        const dinnerLink = question.querySelector("#dinner-link").value;
+    form.querySelectorAll("#question-menu-day").forEach((question, i) => {
+      const lunchTitle = question.querySelector("#lunch-title").value;
+      const lunchLink = question.querySelector("#lunch-link").value;
+      const dinnerTitle = question.querySelector("#dinner-title").value;
+      const dinnerLink = question.querySelector("#dinner-link").value;
 
-        menuRepository.saveSingleMenu(
-          menuStartDate,
-          lunchTitle,
-          lunchLink,
-          dinnerTitle,
-          dinnerLink
-        );
-      }
+      menuRepository.saveSingleMenu(
+        menuStartDate.toDateString(),
+        lunchTitle,
+        lunchLink,
+        dinnerTitle,
+        dinnerLink
+      );
     });
 
     const mainElement = document.querySelector(".main-wrapper");

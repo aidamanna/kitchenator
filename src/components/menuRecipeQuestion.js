@@ -2,7 +2,7 @@ import Moon from "../assets/images/moon.svg";
 import Sun from "../assets/images/sun.svg";
 import * as menuQuestion from "./menuQuestion";
 
-export function html(position, title) {
+export function html(title) {
   const inputs = [
     `<img class="input-icon" src="${Sun}">
                     <div>
@@ -16,5 +16,5 @@ export function html(position, title) {
                     </div>`,
   ];
 
-  return menuQuestion.html(position, title, inputs);
+  return menuQuestion.html(title, inputs, `menu-day`);
 }
