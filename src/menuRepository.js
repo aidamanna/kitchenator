@@ -4,15 +4,15 @@ export function get() {
   return menu;
 }
 
-export function saveSingleMenu(
-  day,
+export function saveDayMenu(
+  date,
   lunchTitle,
   lunchLink,
   dinnerTitle,
   dinnerLink
 ) {
-  const singleMenu = {
-    day,
+  const dayMenuJson = {
+    day: date,
     lunch: {
       title: lunchTitle,
       link: lunchLink,
@@ -23,5 +23,5 @@ export function saveSingleMenu(
     },
   };
 
-  menu.push(singleMenu);
+  menu.push(dayMenuJson);
 }

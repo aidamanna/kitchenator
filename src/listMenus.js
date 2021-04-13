@@ -1,4 +1,4 @@
-import * as addMenu from "./addMenu";
+import * as addWeekMenu from "./add-week-menu/popup";
 import * as menuRepository from "./menuRepository";
 
 export function render(targetElement) {
@@ -7,7 +7,7 @@ export function render(targetElement) {
     .map(
       (dailyMenu) =>
         `<li>
-            <div class="menu-day">${dailyMenu.day}</div>
+            <div class="menu-day">${new Date(dailyMenu.day)}</div>
             <div>
                 <div class="menu-meal">🌞 
                     <a href="${dailyMenu.lunch.link}">${dailyMenu.lunch.title}</a>
@@ -21,10 +21,10 @@ export function render(targetElement) {
     .join("");
 
   const menuListElement = `<input type="button" class="btn-default" value="Add your menu">
-                <ul class="weekly-menu-list">${menuItemsElement}</ul>`;
+                <ul class="menu-list">${menuItemsElement}</ul>`;
 
   targetElement.innerHTML = menuListElement;
 
   const buttonElement = document.querySelector("input");
-  buttonElement.addEventListener("click", addMenu.render);
+  buttonElement.addEventListener("click", addWeekMenu.render);
 }

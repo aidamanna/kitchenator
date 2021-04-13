@@ -1,20 +1,20 @@
-import * as menuRecipeQuestion from "./components/menuRecipeQuestion";
-import * as menuStartDayQuestion from "./components/menuStartDayQuestion";
-import * as menuList from "./menuList";
-import * as menuRepository from "./menuRepository";
+import * as dayMenuQuestion from "./dayMenuQuestion";
+import * as startDateQuestion from "./startDateQuestion";
+import * as listMenus from "../listMenus";
+import * as menuRepository from "../menuRepository";
 
 export function render() {
   const days = Array.from({ length: 7 }, (_, i) => i + 1);
 
-  const menuRecipeQuestions = days
-    .map((day) => menuRecipeQuestion.html(`Day ${day} menu`))
+  const dayMenuQuestionsHtml = days
+    .map((day) => dayMenuQuestion.html(`Day ${day} menu`))
     .join("");
 
   const modal = `<div class="modal-container">
         <div class="modal">
             <form id="add-menu-form" class="modal-wrapper">
-                ${menuStartDayQuestion.html()}
-                ${menuRecipeQuestions} 
+                ${startDateQuestion.html()}
+                ${dayMenuQuestionsHtml} 
                 <footer class="modal-footer">
                     <input type="button" id="back-button" value="Back" class="btn-default hidden"/>
                     <input type="button" id="next-button" value="Next" class="btn-default"/>
@@ -80,16 +80,18 @@ export function render() {
     document.querySelector(".modal-container").remove();
 
     const form = e.currentTarget;
-    const menuStartDate = new Date(form.querySelector("#date").value);
+    const menuStartDate = new Date(form.querySelector("#question-week-menu-start-day #date").value);
 
-    form.querySelectorAll("#question-menu-day").forEach((question, i) => {
-      const lunchTitle = question.querySelector("#lunch-title").value;
-      const lunchLink = question.querySelector("#lunch-link").value;
-      const dinnerTitle = question.querySelector("#dinner-title").value;
-      const dinnerLink = question.querySelector("#dinner-link").value;
+    form.querySelectorAll("#question-day-menu").forEach((question, i) => {
+      const lunchTitle = question.querySelector("#lunch-recipe-title").value;
+      const lunchLink = question.querySelector("#lunch-recipe-link").value;
+      const dinnerTitle = question.querySelector("#dinner-recipe-title").value;
+      const dinnerLink = question.querySelector("#dinner-recipe-link").value;
 
-      menuRepository.saveSingleMenu(
-        menuStartDate.toDateString(),
+      let date = new Date(menuStartDate.getFullYear(), menuStartDate.getMonth(), menuStartDate.getDate() + i);
+
+      menuRepository.saveDayMenu(
+        date,
         lunchTitle,
         lunchLink,
         dinnerTitle,
@@ -98,6 +100,6 @@ export function render() {
     });
 
     const mainElement = document.querySelector(".main-wrapper");
-    menuList.render(mainElement);
+    listMenus.render(mainElement);
   });
 }

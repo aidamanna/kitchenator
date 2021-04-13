@@ -124,13 +124,13 @@ body {
     margin: 0 auto;
 }
 
-.weekly-menu-list {
+.menu-list {
     display: grid;
     grid-row-gap: 0.6em;
     margin-top: 14px;
 }
 
-.weekly-menu-list li{
+.menu-list li{
     display: flex;
     align-items: center;
     border-radius: 8px;

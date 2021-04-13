@@ -1,5 +1,5 @@
 import Calendar from "../assets/images/calendar.svg";
-import * as menuQuestion from "./menuQuestion";
+import * as question from "./question";
 
 export function html() {
   const title = "Pick menu start date";
@@ -8,5 +8,5 @@ export function html() {
      <input type="date" id="date" value="date" placeholder="YYYY-MM-DD"/>`,
   ];
 
-  return menuQuestion.html(title, inputs, "start-day");
+  return question.html(title, inputs, "week-menu-start-day");
 }
