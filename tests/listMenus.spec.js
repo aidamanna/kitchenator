@@ -5,10 +5,8 @@ import { render } from "../src/listMenus";
 test("When loading the page the list of menus is rendered", async () => {
   document.body.innerHTML = `<div class="main-wrapper"></div>`;
 
-  const mainElement = document.querySelector(".main-wrapper");
+  render();
 
-  render(mainElement);
-
-  const menuList = document.querySelector(".menu-list");
-  expect(menuList).toBeInTheDocument();
+  const menuListElement = document.querySelector(".menu-list");
+  expect(menuListElement).toBeInTheDocument();
 });
