@@ -1,4 +1,5 @@
 import * as addWeekMenu from "./add-week-menu/popup";
+import * as dateFormatter from "./dateFormatter";
 import * as menuRepository from "./menuRepository";
 
 export function render() {
@@ -9,7 +10,14 @@ export function render() {
     .map(
       (dailyMenu) =>
         `<li>
-            <div class="menu-day">${new Date(dailyMenu.day)}</div>
+            <div class="menu-day">
+              <div class="day-of-week">${dateFormatter.getDayOfWeek(
+                dailyMenu.day
+              )}</div>
+              <div class="month-and-day">${dateFormatter.getMonthAndDay(
+                dailyMenu.day
+              )}</div>
+            </div>
             <div>
                 <div class="menu-meal">🌞 
                     <a href="${dailyMenu.lunch.link}">${

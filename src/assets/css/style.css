@@ -300,3 +300,16 @@ input[type="date"] {
 .hidden {
     display: none;
 }
+
+.day-of-week {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.01em;
+    color: var(--light-gray);
+}
+
+.month-and-day {
+    color: var(--light-gray);
+    font-size: 0.75em;
+}
