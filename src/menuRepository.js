@@ -12,7 +12,7 @@ export function saveDayMenu(
   dinnerLink
 ) {
   const dayMenuJson = {
-    day: date,
+    date,
     lunch: {
       title: lunchTitle,
       link: lunchLink,

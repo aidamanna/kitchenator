@@ -1,5 +1,5 @@
-import Moon from "../assets/images/moon.svg";
-import Sun from "../assets/images/sun.svg";
+import Moon from "../../assets/images/moon.svg";
+import Sun from "../../assets/images/sun.svg";
 import * as question from "./question";
 
 export function html(title) {

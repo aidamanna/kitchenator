@@ -1,4 +1,4 @@
-import Calendar from "../assets/images/calendar.svg";
+import Calendar from "../../assets/images/calendar.svg";
 import * as question from "./question";
 
 export function html() {

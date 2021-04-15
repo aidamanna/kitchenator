@@ -1,5 +1,5 @@
-import * as listMenus from "../listMenus";
-import * as menuRepository from "../menuRepository";
+import * as listMenus from "../list-menus/listMenus";
+import * as menuRepository from "../../menuRepository";
 import * as dayMenuQuestion from "./dayMenuQuestion";
 import * as startDateQuestion from "./startDateQuestion";
 
