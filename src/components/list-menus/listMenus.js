@@ -1,6 +1,6 @@
-import * as addWeekMenu from "../add-week-menu/popup";
 import * as dateFormatter from "../../dateFormatter";
 import * as menuRepository from "../../menuRepository";
+import * as addWeekMenu from "../add-week-menu/popup";
 
 export function render() {
   const targetElement = document.querySelector(".main-wrapper");
@@ -20,14 +20,10 @@ export function render() {
             </div>
             <div>
                 <div class="menu-meal">🌞 
-                    <a href="${dayMenu.lunch.link}">${
-          dayMenu.lunch.title
-        }</a>
+                    <a href="${dayMenu.lunch.link}">${dayMenu.lunch.title}</a>
                 </div>
                 <div class="menu-meal">🌙  
-                    <a href="${dayMenu.dinner.link}">${
-          dayMenu.dinner.title
-        }</a>
+                    <a href="${dayMenu.dinner.link}">${dayMenu.dinner.title}</a>
                 </div>
             </div>
         </li>`

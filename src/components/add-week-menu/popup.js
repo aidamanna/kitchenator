@@ -1,5 +1,5 @@
-import * as listMenus from "../list-menus/listMenus";
 import * as menuRepository from "../../menuRepository";
+import * as listMenus from "../list-menus/listMenus";
 import * as dayMenuQuestion from "./dayMenuQuestion";
 import * as startDateQuestion from "./startDateQuestion";
 
@@ -94,7 +94,7 @@ export function render() {
         menuStartDate.getFullYear(),
         menuStartDate.getMonth(),
         menuStartDate.getDate() + i
-      );
+      ).toISOString();
 
       menuRepository.saveDayMenu(
         date,
