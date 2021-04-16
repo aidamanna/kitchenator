@@ -23,16 +23,6 @@ const daysOfWeek = [
   "sábado",
 ];
 
-export function execute(dateString) {
-  const date = new Date(dateString);
-
-  const dayOfWeek = daysOfWeek[date.getDay()];
-  const dayOfMonth = date.getDate();
-  const month = months[date.getMonth()];
-
-  return `${dayOfWeek} ${dayOfMonth} ${month}`;
-}
-
 export function getDayOfWeek(dateString) {
   const date = new Date(dateString);
 

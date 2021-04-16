@@ -1,9 +1,9 @@
-const menu = [];
+let menu = [];
 
 export function get() {
   return menu;
 }
 
 export function saveWeekMenu(weekMenuJson) {
-  menu.concat(weekMenuJson);
+  menu = menu.concat(weekMenuJson);
 }

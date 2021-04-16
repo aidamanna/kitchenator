@@ -30,10 +30,8 @@ export function render() {
     )
     .join("");
 
-  const menuListElement = `<input type="button" class="btn-default" value="Add your menu">
-                <ul class="menu-list">${dayMenuElement}</ul>`;
-
-  targetElement.innerHTML = menuListElement;
+  targetElement.innerHTML = `<input type="button" class="btn-default" value="Add your menu">
+                <ul class="menu-list">${dayMenuElement}</ul>`;;
 
   const buttonElement = document.querySelector("input");
   buttonElement.addEventListener("click", addWeekMenu.render);
