@@ -1,7 +1,7 @@
 let menu = [];
 
 export function get() {
-  return menu;
+  return Promise.resolve(menu);
 }
 
 export function saveWeekMenu(weekMenuJson) {
