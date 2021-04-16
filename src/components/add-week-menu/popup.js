@@ -1,7 +1,6 @@
-import * as menuRepository from "../../menuRepository";
-import * as listMenus from "../list-menus/listMenus";
 import * as dayMenuQuestion from "./dayMenuQuestion";
 import * as startDateQuestion from "./startDateQuestion";
+import * as submitHandler from "./submitHandler"
 
 export function render() {
   const days = Array.from({ length: 7 }, (_, i) => i + 1);
@@ -75,36 +74,5 @@ export function render() {
     }
   });
 
-  formElement.addEventListener("submit", function (e) {
-    e.preventDefault();
-    document.querySelector(".modal-container").remove();
-
-    const form = e.currentTarget;
-    const menuStartDate = new Date(
-      form.querySelector("#question-week-menu-start-day #date").value
-    );
-
-    form.querySelectorAll("#question-day-menu").forEach((question, i) => {
-      const lunchTitle = question.querySelector("#lunch-recipe-title").value;
-      const lunchLink = question.querySelector("#lunch-recipe-link").value;
-      const dinnerTitle = question.querySelector("#dinner-recipe-title").value;
-      const dinnerLink = question.querySelector("#dinner-recipe-link").value;
-
-      const date = new Date(
-        menuStartDate.getFullYear(),
-        menuStartDate.getMonth(),
-        menuStartDate.getDate() + i
-      ).toISOString();
-
-      menuRepository.saveDayMenu(
-        date,
-        lunchTitle,
-        lunchLink,
-        dinnerTitle,
-        dinnerLink
-      );
-    });
-
-    listMenus.render();
-  });
+  formElement.addEventListener("submit", submitHandler.handle);
 }
