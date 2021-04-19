@@ -12,6 +12,6 @@ describe("Get month and day", () => {
   it("gets the day of the month and the name of the month", () => {
     const date = new Date("2021-04-05").toISOString();
 
-    expect(getMonthAndDay(date)).toBe("5 Abril");
+    expect(getMonthAndDay(date)).toBe("5 abril");
   });
 });
