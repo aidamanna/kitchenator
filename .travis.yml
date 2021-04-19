@@ -5,7 +5,7 @@ node_js:
 cache: npm
 
 env:
-  - TERRAFORM_VERSION=0.14.9
+  - TERRAFORM_VERSION=0.15
 
 before-install:
   - pip install --user awscli
