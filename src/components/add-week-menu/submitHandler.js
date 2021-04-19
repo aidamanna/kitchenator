@@ -7,7 +7,7 @@ export function handle(e) {
 
   const form = e.currentTarget;
   const menuStartDate = new Date(
-      form.querySelector("#question-week-menu-start-day #date").value
+    form.querySelector("#question-week-menu-start-day #date").value
   );
 
   const weekMenuJson = [];
@@ -19,9 +19,9 @@ export function handle(e) {
     const dinnerLink = question.querySelector("#dinner-recipe-link").value;
 
     const date = new Date(
-        menuStartDate.getFullYear(),
-        menuStartDate.getMonth(),
-        menuStartDate.getDate() + i
+      menuStartDate.getFullYear(),
+      menuStartDate.getMonth(),
+      menuStartDate.getDate() + i
     ).toISOString();
 
     const dayMenuJson = {

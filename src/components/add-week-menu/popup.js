@@ -1,6 +1,6 @@
 import * as dayMenuQuestion from "./dayMenuQuestion";
 import * as startDateQuestion from "./startDateQuestion";
-import * as submitHandler from "./submitHandler"
+import * as submitHandler from "./submitHandler";
 
 export function render() {
   const days = Array.from({ length: 7 }, (_, i) => i + 1);

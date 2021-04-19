@@ -5,17 +5,17 @@ import * as addWeekMenu from "../add-week-menu/popup";
 export function render() {
   const targetElement = document.querySelector(".main-wrapper");
 
-  menuRepository
-    .get()
-    .then((menuList) => {
-      const dayMenuElement = menuList.map((dayMenu) =>
-              `<li>
+  menuRepository.get().then((menuList) => {
+    const dayMenuElement = menuList
+      .map(
+        (dayMenu) =>
+          `<li>
             <div class="menu-date">
               <div class="day-of-week">${dateFormatter.getDayOfWeek(
-                  dayMenu.date
+                dayMenu.date
               )}</div>
               <div class="month-and-day">${dateFormatter.getMonthAndDay(
-                  dayMenu.date
+                dayMenu.date
               )}</div>
             </div>
             <div>
@@ -30,10 +30,10 @@ export function render() {
       )
       .join("");
 
-      targetElement.innerHTML = `<input type="button" class="btn-default" value="Add your menu">
+    targetElement.innerHTML = `<input type="button" class="btn-default" value="Add your menu">
                 <ul class="menu-list">${dayMenuElement}</ul>`;
 
-      const buttonElement = document.querySelector("input");
-      buttonElement.addEventListener("click", addWeekMenu.render);
-    });
+    const buttonElement = document.querySelector("input");
+    buttonElement.addEventListener("click", addWeekMenu.render);
+  });
 }
