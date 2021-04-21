@@ -18,7 +18,7 @@ export function render() {
                 dayMenu.date
               )}</div>
             </div>
-            <div>
+            <div class="menu-meals">
                 <div class="menu-meal">🌞
                     <a href="${dayMenu.lunch.link}">${dayMenu.lunch.title}</a>
                 </div>
