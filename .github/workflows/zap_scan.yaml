@@ -9,6 +9,6 @@ jobs:
     name: OWASP ZAP baseline scan
     steps:
       - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.3.0
+        uses: zaproxy/action-baseline@v0.4.0
         with:
           target: 'http://devicenator.com/'
