@@ -1,5 +1,7 @@
 on:
-  push:
+  schedule:
+    # Runs every day At 01:00.
+    - cron:  '0 1 * * *'
 
 jobs:
   zap-full-scan:
