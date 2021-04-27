@@ -8,8 +8,8 @@ resource "aws_route53_record" "kitchenator" {
   type = "A"
 
   alias {
-    name = aws_s3_bucket.kitchenator.website_domain
-    zone_id = aws_s3_bucket.kitchenator.hosted_zone_id
+    name = aws_cloudfront_distribution.s3_distribution.domain_name
+    zone_id = local.cloudfront_zone_id
     evaluate_target_health = false
   }
 }

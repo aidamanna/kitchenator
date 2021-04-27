@@ -36,7 +36,8 @@ data "aws_iam_policy_document" "pipeline-policy-document" {
       "kms:*",
       "route53:*",
       "s3:*",
-      "acm:*"
+      "acm:*",
+      "cloudfront:*"
     ]
     resources = ["*"]
   }
